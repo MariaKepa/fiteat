@@ -1,0 +1,52 @@
+{% extends 'fiteat/base.html'%}
+{% load static %}
+
+
+{% block nav%}
+  <div class="login">
+    {% if user.is_authenticated %}
+      Zalogowany użytkownik: <b>{{user.username}}</b>|<a href= "{% url 'logout_then_login' %}">Wyloguj</a>    
+    {% else %}
+      <a href="{% url 'login' %}">Zaloguj</a>|<a href="{% url 'register' %}">Rejestracja</a>
+    {% endif %}
+  </div>
+  <ul class="nav_menu">
+       <li><a href="{% url 'first_page' %}">EAT FIT</a></li>
+    <li><a href="{% url 'product' %}">PRODUKTY</a></li>
+     <li>
+      {% if user.is_authenticated %}
+         <a href="{% url 'dairy' %}">DZIENNIK</a>
+      {% else %}
+         <a href="{% url 'login' %}">DZIENNIK</a>
+      {% endif %}
+    </li>
+    <li><a href="{% url 'tips' %}">PORADY</a></li>
+    <li><a href="{% url 'contact' %}">KONTAKT</a></li>
+  </ul>
+{% endblock %}
+
+{% block container %}
+
+<section class = "container_block">
+<article class ="ask">
+<h1 style="color:teal;text-align:center; font-family: 'Seaweed Script', cursive; font-size: 36px"> Co sądzisz o naszej stronie?</h1>
+<p> Masz jakieś pomysły na jej usprawnienie? Chcesz nas o coś zapytać w związku z działalnością eatfit?
+ A może pochwalić, lub skrytykowac? Pisz śmiało, czytamy wszystkie uwagi i na każdą wiadomość postaramy się odpowiedzieć. </p>
+</article>
+<article class="contact">
+<h3>Kontakt</h3>
+<b>Tel.</b> 609015580 </br>
+<b>Email:</b> fiteat@gmail.com</br>
+<b>Adres:</b> ul.Słowackiego 5,</br>
+   32-400 Myślenice</p>
+</article>
+  
+  </section>
+
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	

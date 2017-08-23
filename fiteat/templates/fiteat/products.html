@@ -1,0 +1,34 @@
+{% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+ <section class="products">
+  <p> KATEGORIE PRODUKTÓW </p> 
+   
+     {% for category in categorys %}
+   
+    <div class= "category_table">
+      <table>
+          <tr><td><a href="{% url 'product_detail' id=category.id %}">
+          <img src={% static category.pathtopicture %} 
+        class="img_responsive"></a></td></tr>
+        <tr><td>{{category.name}}</td></tr> 
+      </table>
+    </div>
+    {% if forloop.counter|divisibleby:3 %}
+    <div style="clear:both"></div>
+    {% endif %}
+    {%endfor%} 
+    
+
+   
+ <div style="clear:both"></div>
+ </section>
+{% endblock %}
+
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	
