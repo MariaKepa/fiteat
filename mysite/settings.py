@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fiteatdb',
+        'NAME': 'fiteatdatabase_2',
 	'HOST':'localhost',
 	'PORT': '3306',
 	'USER': 'root',
 	'PASSWORD': 'root',   
-    'OPTIONS': {'charset': 'utf8'},
+    
 }
 }
 
@@ -136,6 +136,13 @@ MEDIA_URL= '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #----------------LOGIN------------------
-LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_REDIRECT_URL = reverse_lazy('first_page')
 LOGIN_URL = reverse_lazy('login')
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.app_directories.load_template_source',
+)

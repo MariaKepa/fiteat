@@ -2,29 +2,6 @@
 {% load static %}
 
 
-{% block nav%}
-  <div class="login">
-    {% if user.is_authenticated %}
-      Zalogowany użytkownik: <b>{{user.username}}</b>|<a href= "{% url 'logout_then_login' %}">Wyloguj</a>    
-    {% else %}
-      <a href="{% url 'login' %}">Zaloguj</a>|<a href="{% url 'register' %}">Rejestracja</a>
-    {% endif %}
-  </div>
-  <ul class="nav_menu">
-       <li><a href="{% url 'first_page' %}">EAT FIT</a></li>
-    <li><a href="{% url 'product' %}">PRODUKTY</a></li>
-     <li>
-      {% if user.is_authenticated %}
-         <a href="{% url 'dairy' %}">DZIENNIK</a>
-      {% else %}
-         <a href="{% url 'login' %}">DZIENNIK</a>
-      {% endif %}
-    </li>
-    <li><a href="{% url 'tips' %}">PORADY</a></li>
-    <li><a href="{% url 'contact' %}">KONTAKT</a></li>
-  </ul>
-{% endblock %}
-
 {% block container %}
 <div class="container_block">
   <p> Tutaj znajdziesz odpowiedzi na bardzo ciekawe pytania. Każdy link przeniesie Cie do blogu młodej, inteligentnej

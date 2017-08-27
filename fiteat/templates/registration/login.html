@@ -1,36 +1,9 @@
 {% extends 'fiteat/base.html'%}
 {% load static %}
 
-
-{% block nav%}
- 
-  <div class="login">
-    {% if request.user.is_authenticated %}
-      Zalogowany użytkownik: <b>{{request.user.first_name}}</b>|<a href= "{% url 'logout_then_login'%}">Wyloguj</a>    
-    {% else %}
-      <a href="">Zaloguj</a>|<a href="{% url 'register' %}">Rejestracja</a>
-    {% endif %}
-  </div>
-  
-  <ul class="nav_menu">
-    <li><a href="{% url 'first_page' %}">EAT FIT</a></li>
-    <li><a href="{% url 'product' %}">PRODUKTY</a></li>
-  <li>
-      {% if user.is_authenticated %}
-         <a href="{% url 'dairy' %}">DZIENNIK</a>
-      {% else %}
-         <a href="{% url 'login' %}">DZIENNIK</a>
-      {% endif %}
-    </li>
-    <li><a href="{% url 'tips' %}">PORADY</a></li>
-    <li><a href="{% url 'contact' %}">KONTAKT</a></li>
-  </ul>
-
-{% endblock %}
-
 {% block container %}
-<section class = "login_form">
-  <h1> Zaloguj się by cieszyć się z korzytania z eatfit.</h1>
+<section class = "all_forms">
+  <h2> Zaloguj się by cieszyć się z korzytania z eatfit.</h2>
   {% if form.errors %}
     <p> Nazwa lub hasło nieprawidłowe </p>
   {% endif %}
@@ -39,6 +12,7 @@
       {{form.as_p}}{% csrf_token %}
       {% comment %} <input type = "hidden" name = "next" value ="{% url 'dashboard'%}"/> {% endcomment %}
       <p><input type="submit" value="Zaloguj się"></p>
+      <h6><a href = "{% url 'password_reset'%}"> Nie pamietasz hasła?</a><h6>
     </form>
   </div>     
 </section> 

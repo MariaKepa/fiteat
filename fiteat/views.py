@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegistrationForm
 from .models import Category
 from .models import Product
+from .models import DiaryEntry
 
 
 
@@ -38,8 +39,10 @@ def statute(request):
 def tips(request):
     return render(request, 'fiteat/nav_menu/tips.html', {})
 
-def dairy(request):
-    return render(request, 'fiteat/nav_menu/dairy.html', {})
+def diary(request):
+
+    diary_entries = DiaryEntry.objects.filter(user = request.user)
+    return render(request, 'fiteat/nav_menu/diary.html', {'diary_entries': diary_entries})
 
 def body_weight(request):
     return render(request, 'fiteat/nav_menu/body_weight.html', {})
@@ -47,6 +50,11 @@ def body_weight(request):
 def edit_panel(request):
     return render(request, 'fiteat/nav_menu/edit_panel.html', {})
 
+def profile(request):
+    return render(request, 'fiteat/profile.html', {})
+
+def calories(request):
+    return render(request, 'fiteat/calories_person.html', {})
 
 # ----------REGISTRATION------
 
@@ -64,6 +72,11 @@ def register(request):
 
 
 # ---------------LOGIN---------
-@login_required
-def dashboard(request):
-    return render(request, 'fiteat/dashboard.html', {})
+# @login_required
+# def dashboard(request):
+#     return render(request, 'fiteat/dashboard.html', {})
+
+def remove_diary_entry(request, id):
+    DiaryEntry.objects.get(id=id).delete()
+    return diary(request)
+

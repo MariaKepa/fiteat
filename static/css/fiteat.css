@@ -5,7 +5,8 @@ body
 	margin:0px;
 	/* font-family: 'Open Sans', sans-serif;
 	font-family: 'Poppins', sans-serif;
-	font-family: 'Seaweed Script', cursive; */
+	font-family: 'Seaweed Script', cursive;
+	font-family: 'Abhaya Libre', sans-serif; */
 }
 
 header
@@ -25,9 +26,7 @@ nav
 {
 	height: 80px;
 	float: right;
-	margin: 20px 5px 20px 0px;
-	
-		
+	margin: 20px 5px 20px 0px;	
 }
 
 ul.nav_menu
@@ -48,10 +47,9 @@ ul.nav_menu a
 	display: block;
 }
 
-ul.nav_menu a:hover
+ul.nav_menu a:hover, a:active
 {
 	color: grey;
-
 }
 
 ul.nav_menu > li
@@ -79,6 +77,7 @@ ul.nav_menu > li
 	top: 55%;
 	right: 96.5%;
 }
+
 .w3-right
 {
 	cursor: pointer;
@@ -86,6 +85,7 @@ ul.nav_menu > li
 	top: 55%;
 	right:0%;
 }
+
 .w3-black
 {
     color:#33CCCC !important;
@@ -113,29 +113,22 @@ ul.nav_menu > li
 	margin: 100px 0px 50px 0px;	
 	padding: 30px;
 	text-align: justify;
-	
 }
+
 article.ask
 {
-	
 	margin: 50px 0px;
-	font-family: 'Poppins', sans-serif;
-	
-	
-	
+	font-family: 'Poppins', sans-serif;	
 }
+
 article.contact
 {	
-	
 	text-align: center;
 	margin: 0px;
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 24px;
 	padding: 50px 100px 0px 0px;
-
 }
-
-
 
 .img-responsive
 {
@@ -144,7 +137,6 @@ article.contact
 
 figure.slideshow
 {
-	
 	height: 520px;
 }
 
@@ -152,32 +144,23 @@ section.description
 {
 	margin: auto;
 	padding: 50px;
-	font-family: 'Poppins', sans-serif;
-	
-
-	
+	font-family: 'Poppins', sans-serif;	
 }
 
 article p
 {
 	text-align: justify;
 	font-size: 24px;
-	
 }
-
-
-
 
 section.description h2
 {
 	color: teal;
 	text-align: center;
 	font-family: 'Seaweed Script', cursive;
-	font-size: 90px;
-	
-
-	
+	font-size: 90px;	
 }
+
 span
 {
 	color: black;
@@ -196,19 +179,17 @@ section.info
 	text-align: justify;	
 	background: #EEEEEE;
 }
+
 section.info p
 {
 	font-family: 'Seaweed Script', cursive;
 	text-align: center;
 	padding: 50px;
-	font-size: 50px; 
-	
-	
+	font-size: 50px; 	
 }
 
 .socials
-{
-	
+{	
 	height: 160px;
 	margin:0px;
 	padding:0;
@@ -223,13 +204,9 @@ section.info p
 	width:20%;
 }
 
-
 ul.nav_me
-{
-	
-	list-style-type: none;
-	
-	
+{	
+	list-style-type: none;	
 }
 
 ul.nav_me a
@@ -308,7 +285,6 @@ ul.nav_me > li
 	background: #d95333;
 }
 
-
 footer 
 {	
 	text-align: center;
@@ -320,8 +296,7 @@ footer
 	font-size: 14px;
 	text-align: right;
 	margin: 0px;
-	padding: 10px;
-		
+	padding: 10px;	
 }
 .login a
 {
@@ -343,7 +318,6 @@ section.products p
 	padding: 50px;
 }
 
-
 .category_table
 {
 	margin: 20px 50px 70px 50px;
@@ -361,7 +335,6 @@ section.products p
 }
 
 /* ---------------PRODUCT_DETAIL.HTML----------- */
-
 section.product_detail
 {
 	font-family: 'Poppins', sans-serif;
@@ -389,9 +362,7 @@ section.product_detail table tr td
 	 padding: 10px;
 }
 	
-
 /* -----------------TIPS.HTML------------------ */
-
 .container_block p
 {
 	font-size: 28px;
@@ -416,12 +387,13 @@ section.product_detail table tr td
 	color: black;	
 }
 
-/* --------------DAIRY.HTML-------------------- */
+/* --------------DIARY.HTML-------------------- */
 section.calcal
 {
 	height: 400px;
 	background: yellow;
 }
+
 section.calpro
 {
 	background: #DDDDDD;
@@ -430,6 +402,7 @@ section.calpro
 	border: 1px solid black;
 	border-radius: 30px;
 }
+
 .search_product p
 {
 	margin: 0px;
@@ -439,83 +412,7 @@ section.calpro
 	padding: 15px;
 	text-align: center;
 }
-/* ------REGISTER----- */
-
-section.form_register 
-{
-	margin: 100px 0px ;
-	text-align: center;
-	padding: 50px;
-	
-}
-
-section.form_register h4
-{
-	padding:10px 0 50px 5px;
-	font-size: 25px;
-	
-	
-}
-
-section.form_register p
-{
-	margin:5px;
-	padding: 5px;
-	text-align: left;
-}
-section.form_register form
-{
-	border: 1px solid grey;
-	background: #EEEEEE;
-	padding: 50px 0px;
-			
-}
-section.form_register form, input, select 
-{
-			width: 55%;
-			margin:auto;
-			
-}
-section.form_register label
-{
-	width:30%;
-	display: block;
-	padding:5px 10px 5px 5px;
-	float:left;
-	text-align: center;
-}
-section.form_register #id_username, #id_first_name,#id_email, #id_password, #id_password2
-{
-	padding:8px 8px;
-	border-bottom: 1px double #171717;
-	border-top: 1px double #171717;
-	border-left:1px double #333333;
-	border-right:1px double #333333;
-}
-span.helptext
-{
-	font-size: 13px;
-	text-align: justify;
-	margin: 0px 0px 0px 180px;
-	
-}
-
-input[type=submit]
-{
-   background: #CCCCCC;
-   /* margin: 60px 130px; */
-   margin: auto;
-   display: block;
-   font-size: 25px;
-   width: 50%;
-   padding: 10px;
-
-}
-input[type=submit]:hover
-{
-   background: grey;
-}
-
+/* -----------LOGIN.HTML-------- */
 input[type=buttom]
 {
    background: #CCCCCC;
@@ -525,53 +422,116 @@ input[type=buttom]
    width: 15%;
    text-align:center;
    padding: 5px;
-
 }
+
 input[type=buttom]:hover
 {
    background: grey;
 }
 
-/* ------LOGIN.HTML------------ */
-
-section.login_form
-{
-	margin: 80px 0px;
-	text-align: center;
-	padding: 50px;	
-}
-
-.login_action
-{
-	background: #EEEEEE;
-	width: 40%;
-	padding: 50px 0px 0px 0px;
-	margin: auto;
-	border: 1px solid grey;
-	
-}
-.login_action label
-{
-	width:30%;
-	display: block;
-	padding:3px;
-	float:left;
-	text-align: center;
-}
-.login_action #id_username, #id_password
-{
-	padding:8px 3px;
-	border-bottom: 1px double #171717;
-	border-top: 1px double #171717;
-	border-left:1px double #333333;
-	border-right:1px double #333333;
-}
 /* --------------_ABOUTME.HTML---------- */
-
 section.aboutme
 {
 	text-align: justify;
 	font-size: 20px;
 	padding: 10px;
 	font-family: 'Poppins', sans-serif;
+}
+
+/* -----EDIT_PANEL.HTML------- */
+.foto
+{
+	float: left;
+	width: 25%;
+	margin: 20px 40px;	
+}
+
+.foto table, img
+{
+	text-align: center;
+	margin: auto;
+}
+
+.foto:hover
+{
+	background: #DDDDDD;
+} 
+
+/* ------PASSWORD_CHANGE_FORM  (Formularze na wszytkie strony)---- */
+section.all_forms
+{
+	margin: 100px 30px;	
+}
+
+section.all_forms h2
+{
+	font-family: 'Abhaya Libre', sans-serif;
+	text-align: center;
+	padding: 20px;
+}
+
+section.all_forms h6
+{
+	text-align: center;	
+}
+
+section.all_forms form
+{
+	margin: auto;
+	width: 40%;
+	color: grey;
+	padding: 50px 0px;
+}
+
+section.all_forms label
+{
+	display:block;
+	padding: 3px 0px;
+	font-size: 18px;
+	text-align:left;
+	margin:0px;
+}
+
+section.all_forms #id_old_password, #id_new_password1, #id_new_password2, #id_email, #id_username, #id_first_name, #id_password, #id_password2
+{
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: black;
+	padding: 5px 0px;
+	margin:0px;
+	display: block;
+	width: 100%;
+}
+
+section.all_forms ul > li
+{
+	font-size:13px;
+	text-align: justify;
+	margin:auto;
+	padding:0px;
+	color:black;	
+}
+
+span.helptext
+{
+	font-size: 13px;
+	text-align: justify;
+	margin: 0px;	
+} 
+
+input[type=submit]
+{
+   background: #CCCCCC;
+   margin: auto;
+   display:block;
+   font-size: 25px;
+   width: 40%;
+   padding: 5px 10px;
+   margin-top:50px;
+
+}
+
+input[type=submit]:hover
+{
+   background: grey;
 }

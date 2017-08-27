@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>EatFit - Dziennik żywieniowy</title>
   <link rel="stylesheet" href="{% static 'css/fiteat.css' %}">
+ <link href='http://fonts.googleapis.com/css?family=Abhaya+Libre&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins|Seaweed+Script" rel="stylesheet"> 
   <link rel="stylesheet" href="{% static 'css/fontello/css/fontello.css'%}">
 </head>
@@ -25,12 +26,11 @@
       </div>
       {% if request.user.is_authenticated %}
         <ul class="nav_menu">
-          <li><a href="{% url 'edit_panel' %}">PANEL</a></li>
-          <li><a href="{% url 'body_weight' %}">POMIARY</a></li>
-          <li><a href="{% url 'dairy' %}">DZIENNIK</a></li>
+          <li><a href="{% url 'diary' %}">DZIENNIK</a></li>
           <li><a href="{% url 'product' %}">PRODUKTY</a></li>
+          <li><a href="{% url 'body_weight' %}">POMIARY</a></li>
           <li><a href="{% url 'tips' %}">PORADY</a></li> 
-            
+          <li><a href="{% url 'edit_panel' %}">PANEL</a></li>
           <div style="clear:both"></div>
         </ul>
       {%else%}
@@ -40,7 +40,7 @@
           <li><a href="{% url 'product' %}">PRODUKTY</a></li>
           <li>
             {% if user.is_authenticated %}
-              <a href="{% url 'dairy' %}">DZIENNIK</a>
+              <a href="{% url 'diary' %}">DZIENNIK</a>
             {% else %}
               <a href="{% url 'login' %}">DZIENNIK</a>
             {% endif %}
