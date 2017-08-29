@@ -9,6 +9,7 @@
   <table>
     <tr>
         <th>Nazwa produktu</th>
+        <th>Kalorie</th>
         <th>Białko</th>
         <th>Tłuszcze</th>
         <th>Węglowodany</th>
@@ -16,6 +17,7 @@
       {% for product in products %}
         <tr>
           <td> {{product.name}}</td>
+          <td> {{product.calories}}</td>
           <td> {{product.protein}}</td>
           <td> {{product.fats}}</td>
           <td> {{product.carbon}}</td>

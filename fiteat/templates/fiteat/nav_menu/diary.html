@@ -18,34 +18,32 @@
   <section class="calpro">
     <div class="search_product">
       <p style="background:#CCCCCC"> Tabela kalorii, wartości odżywczych</p>
-        
-    <div class= "category_table">
+    </div>  
+    <div class="diary_table">
       <table>
+        <tr>
+          <th>Waga</th>
+          <th>Nazwa</th>
+          <th>Data dodania</th>
+          <th>Białko</th>
+          <th>Węglowodany</th>
+          <th>Tłuszcze</th>
+          <th>Kalorie</th>
+          <th>Opcje</th> 
+        </tr>
         {% for entry in diary_entries %}
         <tr>
           <td>{{entry.weight}}</td>
           <td>{{entry.product.name}}</td>
-          <td>{{entry.publish_date}}</td>
-          <td>dup-{{ entry.product.protein}} </td>
-          
+          <td>{{entry.published_date}}</td>
           <td>{% calculate_per_gram entry.weight entry.product.protein %}</td>
           <td>{% calculate_per_gram entry.weight entry.product.carbon %}</td>
           <td>{% calculate_per_gram entry.weight entry.product.fats %}</td>
           <td>{% calculate_per_gram entry.weight entry.product.calories %}</td>
-          <td> <a href = "{% url 'remove_diary_entry'  id=entry.id%}"><input type = "buttom" value = "usuń"></a></td>
+          <td><a href="{% url 'remove_diary_entry'  id=entry.id%}"><input type = "buttom2" value = "Usuń"></a></td> 
         </tr> 
         {%endfor%} 
       </table>
-    </div>
-        
-    
-          
-        
-      </table>
-
-     
-    </div>
-    <div class = "table_product">
     </div>
   </section>
 </div>
